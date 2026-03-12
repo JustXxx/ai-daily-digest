@@ -1,0 +1,33 @@
+Please generate structured summaries for the following {article_count} articles. You must return one result per article.
+
+## Output Fields
+
+1. **titleZh** — Translate the title into English if it's in another language. Keep as-is if already English.
+2. **summary** — A 4-6 sentence structured summary:
+   - Core problem/topic (1 sentence)
+   - Key arguments, technical approach, or findings (2-3 sentences)
+   - Conclusion or author's core takeaway (1 sentence)
+3. **reason** — One sentence on "why it's worth reading" (state motivation, don't repeat summary content)
+
+## Language
+- titleZh: Translate the title into English if it's in another language. Keep as-is if already English.
+- summary and reason: Write in English.
+
+## Summary Rules
+- First sentence must NOT start with meta-narration like "This article discusses" or "The post introduces" — state facts directly
+- Preserve specific technical terms, data, and version numbers (e.g., "40% performance improvement", "v3.2 released")
+- For comparison/selection articles, name the compared items and state the conclusion
+- If the original excerpt lacks sufficient info, extrapolate reasonably from the title — do not fabricate specific data
+- Goal: reader decides in 30 seconds whether to spend 10 minutes on the original
+
+## Articles
+
+{articles_text}
+
+Return JSON (may be wrapped in ```json code block), {article_count} results total:
+{{
+  "results": [
+    {{"index": 0, "titleZh": "Rewriting Git in Rust: Balancing Performance and Compatibility", "summary": "The gitoxide project attempts to rewrite Git core in pure Rust...", "reason": "Highly valuable for developers interested in the Rust ecosystem and Git internals"}},
+    {{"index": 1, "titleZh": "...", "summary": "...", "reason": "..."}}
+  ]
+}}

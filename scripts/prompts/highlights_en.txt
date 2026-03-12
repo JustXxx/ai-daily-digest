@@ -1,0 +1,12 @@
+Below are today's AI-curated top articles from 90 elite tech blogs.
+
+Category distribution: {cat_summary}
+
+Articles:
+{article_list}
+
+Write a 3-5 sentence "Today's Highlights" summary:
+- Identify 2-3 macro trends or common themes across articles, don't list individual articles
+- Merge and synthesize when multiple articles point to the same trend
+- Tone: objective and concise, like an editor's note in a tech newsletter, no exclamation marks
+- Return plain text only, no JSON, no markdown formatting

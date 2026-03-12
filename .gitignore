@@ -1,3 +1,6 @@
 generated_imgs/
 node_modules/
+__pycache__/
+*.pyc
+.codebuddy/
 *.log
